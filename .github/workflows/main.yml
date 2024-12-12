@@ -1,10 +1,12 @@
 # ワークフロー名を定義します。
 name: Hello GitHub Actions
+
 # トリガーとなるイベントを定義します。(mainブランチへのpush)
 on:
   push:
-		branches:
-      - 'main'
+    branches:
+      - "main"
+
 # ジョブを追加します。(最新バージョンのUbuntu上でビルドを実行します。)
 jobs:
   build:
@@ -12,6 +14,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Run a one-line script
         run: echo Hello GitHub Actions!!
